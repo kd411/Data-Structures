@@ -18,7 +18,7 @@ void insert(int item,nodepointer head)
 	head->rlink=temp;
 	head=temp;
 }
-int del(int item, nodepointer head)
+void del(int item, nodepointer head)
 {
    if(head==NULL)
    {
@@ -29,7 +29,7 @@ int del(int item, nodepointer head)
    if((head)->key==-1)
    {
    	printf("Cannot delete header node\n");
-   	return item;
+   	return;
    }
    while((head)->key!=-1)
    {
@@ -40,12 +40,12 @@ int del(int item, nodepointer head)
    			(head->llink)->rlink=head->rlink;
    		if(head->llink)
    			(head->rlink)->llink=head->llink;
-   		return item;
+   		return;
    	}
    	head=head->rlink;
 	}
    printf("Element not found\n");
-   return 0;
+   return;
 }
 void displayr(nodepointer head)
 {
@@ -88,7 +88,6 @@ int main()
 	first->key=-1;
 	first->llink=first;
 	first->rlink=first;
-	int copy;
 	while(1)
 	{
 		printf("\nEnter\n1. Insert\n2. Delete\n3. Display Forward\n4. Display Backward\n5. Close\n");
@@ -97,12 +96,12 @@ int main()
 		{
 			case 1: printf("enter element to be inserted\n");
 					scanf("%d",&element);
-					insert(element,first); 
+					insert(element,first);
 					break;
            case 2: printf("Enter element to be deleted\n");
                    scanf("%d",&element);
                    del(element, first);
-                   break;                    
+                   break;
 			case 3: printf("List is\n");
 					displayf(first);
 					break;
