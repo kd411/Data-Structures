@@ -11,6 +11,7 @@ void copy(element *start,element *end,element *newQueue)
 {
     element *j;
     element *i;
+    j=start;
     i=newQueue;
     for(;j<end;j++,i++)
         *i=*j;

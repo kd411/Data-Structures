@@ -81,7 +81,7 @@ int main()
 	{
 		printf("enter the coefficient\n");
 		scanf("%f",&coef);
-		printf("enter the exponenet\n");
+		printf("enter the exponent\n");
 		scanf("%d",&expon);
 		attach(coef,expon,&endA);
 	}
@@ -93,7 +93,7 @@ int main()
 	{
 		printf("enter the coefficient\n");
 		scanf("%f",&coef);
-		printf("enter the exponenet\n");
+		printf("enter the exponent\n");
 		scanf("%d",&expon);
 		attach(coef,expon,&endB);
 	}
